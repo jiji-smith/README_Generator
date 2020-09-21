@@ -33,8 +33,23 @@ function promptUser() {
     },
     {
       type: "list",
-      name: "Choose your license",
-      message: "Enter your LinkedIn URL."
+      name: "license",
+      message: "Choose your license",
+      choices: [
+        "None",
+        "Apache License 2.0",
+        "GNU General Public License v3.0",
+        "MIT License",
+        "BSD 2-Clause 'simplified' License",
+        "Boost Software License 1.0",
+        "Creative Commons Zero v1.0 Universal",
+        "Eclipse Pblic License 2.0",
+        "Creative Commons Zero v1.0 Universal",
+        "Eclipse Public License 2.0",
+        "GNE Affero General Public Licese v3.0",
+        "GEN General Public License v2.0",
+        "CNU Lesser Gneeral Public License v2.1",
+      ]
     }
   ]);
 }
@@ -52,12 +67,14 @@ function generateHTML(answers) {
 <body>
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-    <p class="lead">I am from ${answers.location}.</p>
-    <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
+    <h1 class="display-4">This is my project "${answers.title}"</h1>
+    <p class="lead">It is about ${answers.description}.</p>
+    <p class="lead">You can check the website here: <a href = ${answers.homepage}>${answers.homepage}</a>.</p>
+    <p class="lead">License: ${answers.license}.</p>
+    <h3><span class="badge badge-secondary">Contact Me</span></h3>
     <ul class="list-group">
-      <li class="list-group-item">My GitHub username is ${answers.github}</li>
-      <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
+      <li class="list-group-item">Author name is ${answers.author}</li>
+      <li class="list-group-item">LinkedIn: <a href = ${answers.repository}>${answers.repository}</a></li>
     </ul>
   </div>
 </div>
