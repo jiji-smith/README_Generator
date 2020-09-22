@@ -18,6 +18,11 @@ function promptUser() {
     },
     {
       type: "input",
+      name: "usage",
+      message: "how to use the project?"
+    },
+    {
+      type: "input",
       name: "homepage",
       message: "Please type the homepage URL?"
     },
