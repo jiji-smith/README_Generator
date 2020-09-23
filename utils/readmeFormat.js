@@ -1,4 +1,6 @@
-function generateReadme(data){
+// ![Language](https://img.shields.io/github/languages/top/jiji-smith/README_Generator)
+
+function readmeFormat(data){
 return `
 # Title ${data.title} :clipboard:
 ## Description
@@ -27,3 +29,4 @@ ${data.license}
 `
 }
 
+module.exports = readmeFormat

@@ -1,8 +1,11 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const readmeFormat = require("./utils/readmeFormat");
 
 const writeFileAsync = util.promisify(fs.writeFile);
+
+
 
 function promptUser() {
   return inquirer.prompt([
@@ -59,42 +62,42 @@ function promptUser() {
   ]);
 }
 
-function generateHTML(answers) {
-  return `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">This is my project "${answers.title}"</h1>
-    <p class="lead">It is about ${answers.description}.</p>
-    <p class="lead">You can check the website here: <a href = ${answers.homepage}>${answers.homepage}</a>.</p>
-    <p class="lead">License: ${answers.license}.</p>
-    <h3><span class="badge badge-secondary">Contact Me</span></h3>
-    <ul class="list-group">
-      <li class="list-group-item">Author name is ${answers.author}</li>
-      <li class="list-group-item">LinkedIn: <a href = ${answers.repository}>${answers.repository}</a></li>
-    </ul>
-  </div>
-</div>
-</body>
-</html>`;
-}
+// function generateHTML(answers) {
+//   return `
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//   <meta charset="UTF-8">
+//   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+//   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+//   <title>Document</title>
+// </head>
+// <body>
+//   <div class="jumbotron jumbotron-fluid">
+//   <div class="container">
+//     <h1 class="display-4">This is my project "${answers.title}"</h1>
+//     <p class="lead">It is about ${answers.description}.</p>
+//     <p class="lead">You can check the website here: <a href = ${answers.homepage}>${answers.homepage}</a>.</p>
+//     <p class="lead">License: ${answers.license}.</p>
+//     <h3><span class="badge badge-secondary">Contact Me</span></h3>
+//     <ul class="list-group">
+//       <li class="list-group-item">Author name is ${answers.author}</li>
+//       <li class="list-group-item">LinkedIn: <a href = ${answers.repository}>${answers.repository}</a></li>
+//     </ul>
+//   </div>
+// </div>
+// </body>
+// </html>`;
+// }
 
 promptUser()
   .then(function(answers) {
-    const html = generateHTML(answers);
+    const markdown = readmeFormat(answers);
 
-    return writeFileAsync("index.html", html);
+    return writeFileAsync("README.md", markdown);
   })
   .then(function() {
-    console.log("Successfully wrote to index.html");
+    console.log("Successfully!");
   })
   .catch(function(err) {
     console.log(err);
