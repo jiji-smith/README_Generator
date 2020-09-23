@@ -1,19 +1,19 @@
-// ![Language](https://img.shields.io/github/languages/top/jiji-smith/README_Generator)
 
 function readmeFormat(data){
 return `
-# Title ${data.title} :clipboard:
+![Language](https://img.shields.io/github/languages/top/jiji-smith/README_Generator)
+# Title ${data.title}
 ## Description
 ${data.description}
 ## Table of Contents
-* [Title]()
-* [Description]()
-* [Table of Contents]()
-* [Usage]()
-* [License]()
-* [Contributing]()
-* [Tests]()
-* [Questions]()
+* [Title](#title)
+* [Description](#description)
+* [Table of Contents](#table-of-contents)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
 ## Installation
 ${data.repository}
