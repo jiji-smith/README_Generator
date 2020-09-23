@@ -1,6 +1,7 @@
 
 ![Language](https://img.shields.io/github/languages/top/jiji-smith/README_Generator)
-# Title README Generator
+## Title
+README Generator
 ## Description
 It creats README file from node.js
 ## Table of Contents
@@ -15,17 +16,17 @@ It creats README file from node.js
 * [Questions](#questions)
 
 ## Installation
-https://github.com/jiji-smith/README_Generator
+Please check https://github.com/jiji-smith/README_Generator
 ## Usage
-Please check the video below
+Check the code, install npm, answer the questions!
 ## License
-None
+MIT License
 ## Contributing
-Jijiji
+Jiiiii
 ## Video
-https://drive.google.com/file/d/1g9L5A09xaEkrs5QDofysMZwndC9OxR_j/view
+[https://drive.google.com/file/d/1g9L5A09xaEkrs5QDofysMZwndC9OxR_j/view](https://drive.google.com/file/d/1g9L5A09xaEkrs5QDofysMZwndC9OxR_j/view)
 ## Tests
 
 ## Questions
-N/A
+Nope
 
