@@ -12,6 +12,7 @@ ${data.description}
 * [Usage](#usage)
 * [License](#license)
 * [Contributing](#contributing)
+* [Video](#video)
 * [Tests](#tests)
 * [Questions](#questions)
 
@@ -22,10 +23,13 @@ ${data.usage}
 ## License
 ${data.license}
 ## Contributing
-
+${data.author}
+## Video
+${data.video}
 ## Tests
-[Video](https://drive.google.com/file/d/1g9L5A09xaEkrs5QDofysMZwndC9OxR_j/view)
+
 ## Questions
+${data.questions}
 
 `
 }

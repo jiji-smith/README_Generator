@@ -26,8 +26,8 @@ function promptUser() {
     },
     {
       type: "input",
-      name: "homepage",
-      message: "Please type the homepage URL?"
+      name: "video",
+      message: "Please type the Video URL?"
     },
     {
       type: "input",
@@ -58,6 +58,11 @@ function promptUser() {
         "GEN General Public License v2.0",
         "CNU Lesser Gneeral Public License v2.1",
       ]
+    },
+    {
+      type: "input",
+      name: "questions",
+      message: "Do you have any questions?"
     }
   ]);
 }
